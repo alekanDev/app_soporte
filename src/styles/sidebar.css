@@ -1,0 +1,21 @@
+.itemsMenu{
+}
+.itemsMenu li{
+    width: 100%;
+    height: 25px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    padding: 0 30px;
+}
+.itemsMenu span{
+    margin-left: 10px;
+}
+.itemsMenu li:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+    background-color: rgb(138, 137, 137);
+}
