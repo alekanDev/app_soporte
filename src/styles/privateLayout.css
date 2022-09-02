@@ -1,0 +1,32 @@
+.privateLayout{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+    .leftPrivate{
+        width: 15%;
+        height: 100%;
+        background-color: rgb(17, 17, 17);
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+        .logo{
+            width: 100%;
+            height: 18%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .logo img{
+                width: 100px;
+                height: 100px;
+            }
+        .sideBar{
+            width: 100%;
+        }
+    .rightPrivate{
+        width: 85%;
+        height: 100%;
+        background-color: yellow;
+    }
