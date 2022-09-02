@@ -45,7 +45,6 @@
     }
 .btnMenu_on{
     font-weight: bold;
-    /* color: aliceblue; */
     color: var(--cubiqColor);
     text-shadow: 2px 2px 40px rgba(0, 0, 0, 0);
     font-size: 15px;

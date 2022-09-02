@@ -2,7 +2,35 @@
     padding: 0;
     margin: 0;
 }
+::placeholder{
+    color: rgb(190, 190, 190);
+}
 
 :root{
     --cubiqColor: #EA094B;
+    --darkBg: #111111;
 }
+
+.centerCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerVer{
+    display: flex;
+    align-items: center;
+}
+
+.centerHor{
+    display: flex;
+    justify-content: center;
+}
+
+
