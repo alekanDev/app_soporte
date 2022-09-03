@@ -1,19 +1,19 @@
 .navbarContent{
     width: 100%;
-    height: 60px;
-    /* background-color: var(--darkBg); */
-
+    height: 100%;
+    background-color: var(--darkBg);
+    /* background-color: white; */
 }
     .searchContent{
         width: 70%;
         height: 100%;
         box-sizing: border-box;
-        padding-left: 10px;
+        padding-left: 20px;
     }
         .search{
-            width: 40%;
+            width: 50%;
             height: 80%;
-            background-color: rgba(68, 68, 68, 0.123);
+            background-color: rgba(112, 112, 112, 0.205);
             border-radius: 15px;
         }
             .searchForm{
@@ -24,7 +24,7 @@
                 align-items: center;
             }
             .searchForm input{
-                width: 70%;
+                width: 65%;
                 height: 60%;
                 margin-left: 20px;
                 background-color: rgba(0, 0, 0, 0);
@@ -34,14 +34,39 @@
                 text-align: center;
                 outline: none;
             }
+            .searchForm button{
+                width: 20%;
+                height: 60%;
+                border: none;
+                background-color: var(--cubiqColor);
+                color: white;
+                border-radius: 0 10px 10px 0;
+            }
+                .searchForm button:hover{
+                    cursor: pointer;
+                    box-shadow: 0 0 5px var(--cubiqColor);
+                    font-weight: 600;
+                }
 
+    .userIcon{
+        box-sizing: border-box;
+        border: solid var(--cubiqColor) 3px;
+        background-color: black;
+        border-radius: 50%;
+    }
     .loginInfo{
         width: 30%;
         height: 100%;
         justify-content: flex-end;
         box-sizing: border-box;
-        padding-right: 20px;
+        padding-right: 15px;
     }
-        .logout:hover{
-            cursor: pointer;
+        .itemLoginInfo{
+            width: 45px;
+            height: 45px;
+            margin: 0 3px;
+            
         }
+            .itemLoginInfo:hover{
+                cursor: pointer;
+            }
