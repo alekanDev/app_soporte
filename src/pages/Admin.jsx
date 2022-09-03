@@ -1,9 +1,10 @@
 import React from 'react'
+import '../styles/admin.css'
 
 const Admin = () => {
   return (
-    <div adminPageContent>
-        adminPage
+    <div className='adminContent center'>
+      
     </div>
   )
 }
