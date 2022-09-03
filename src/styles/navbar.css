@@ -1,0 +1,47 @@
+.navbarContent{
+    width: 100%;
+    height: 60px;
+    /* background-color: var(--darkBg); */
+
+}
+    .searchContent{
+        width: 70%;
+        height: 100%;
+        box-sizing: border-box;
+        padding-left: 10px;
+    }
+        .search{
+            width: 40%;
+            height: 80%;
+            background-color: rgba(68, 68, 68, 0.123);
+            border-radius: 15px;
+        }
+            .searchForm{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .searchForm input{
+                width: 70%;
+                height: 60%;
+                margin-left: 20px;
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                border-bottom: solid var(--darkBg) 1px;
+                color: white;
+                text-align: center;
+                outline: none;
+            }
+
+    .loginInfo{
+        width: 30%;
+        height: 100%;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        padding-right: 20px;
+    }
+        .logout:hover{
+            cursor: pointer;
+        }
