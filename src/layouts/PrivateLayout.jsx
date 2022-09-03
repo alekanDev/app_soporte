@@ -5,7 +5,7 @@ import logo from '../images/logo.png'
 // Components
 import Sidebar from '../components/Sidebar.jsx'
 import Navbar from '../components/Navbar.jsx'
-import Footer from '../components/Footer.jsx'
+// import Footer from '../components/Footer.jsx'
 
 const Admin = ({ Children }) => {
   return (
@@ -15,20 +15,20 @@ const Admin = ({ Children }) => {
           <img src={ logo } alt="" />
         </div>
         <div className="sideBar">
-      <Sidebar />
+          <Sidebar />
         </div>
       </div>
       <div className='rightPrivate'>
         <div className='navbarPrivate'>
           <Navbar />
         </div>
-          <main>
-            {Children}
-          </main>
-        <div className='footerPrivate'>
-          <Footer />
-        </div>
+        <main>
+          {Children}
+        </main>
       </div>
+      {/* <div className='footerPrivate'>
+        <Footer />
+      </div> */}
     </div>
   )
 }
