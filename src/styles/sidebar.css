@@ -11,7 +11,7 @@
     align-items: center;
     font-size: 14px;
     box-sizing: border-box;
-    padding-left: 30px;
+    padding-left: 35px;
 }
 .itemsMenu span{
     width: 100%;
@@ -49,4 +49,20 @@
     text-shadow: 2px 2px 40px rgba(0, 0, 0, 0);
     font-size: 15px;
     padding-left: 15px;
+}
+
+.subMenus{
+    width: 100%;
+}
+.itemsSubMenus{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+.itemsSubMenus li:hover{
+    padding-left: 20px;
 }
