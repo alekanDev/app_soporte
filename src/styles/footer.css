@@ -1,0 +1,8 @@
+.footerContent{
+  font-size: 8px;
+  display: flex;
+  justify-content: center;
+}
+  .footerContent span{
+    margin-right: 1px;
+  }

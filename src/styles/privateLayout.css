@@ -37,7 +37,22 @@
             width: 100%;
             height: 8%;
         }
-        main{
+        .mainPrivate{
+            width: 99%;
+            height: 89%;
+            background-color: whitesmoke;
+            border-radius: 25px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+    
+        .footerPrivate{
             width: 100%;
-            height: 90%;
+            height: 2%;
+            /* background-color: black; */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 3px;
         }

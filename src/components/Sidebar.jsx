@@ -1,39 +1,47 @@
 import React, { useState } from 'react'
 import '../styles/sidebar.css'
 import Ruta from './Ruta'
-import { FiLayout, FiCamera,FiCodesandbox, FiChevronDown, FiFileText, FiList } from "react-icons/fi"
+import { FiLayout, FiCamera,FiCodesandbox } from "react-icons/fi"
+// import { FiFileText, FiList } from 'react-icons/fi'
+// import { FiPlusSquare } from 'react-icons/fi'
 
+import SubDashboard from './SubDashboard'
+import SubDevices from './SubDevices'
 
 const value=20
 
 const Sidebar = () => {
 
   const [subDashboard, setSubDashboard] = useState(false)
+  const [subDevices, setSubDevices] = useState(false)
 
   return (
     <div className='sidebarContent'>
         <ul className='itemsMenu'>
           <li onClick={() => {
             setSubDashboard(!subDashboard)
-            }}><FiLayout size={value} /><span><Ruta route='/admin/Dashboard' name='Dashboard' /></span><FiChevronDown/> 
+            }}><FiLayout size={value} /><span><Ruta route='/admin/Dashboard' name='Dashboard' /></span>
           </li>
-          {subDashboard && (
-            <Dashboard />
-          )}
-            <li> <FiCodesandbox size={value}/> <span><Ruta route='/admin/companies' name='Companies' /></span></li>
-            <li> <FiCamera size={value}/> <span><Ruta route='/admin/devices' name='Devices' /></span></li>
-        </ul>
-    </div>
-  )
-}
 
-const Dashboard = () =>{
-  return(
-    <div className='subMenus'>
-      <ul className='itemsSubMenus'>
-        <li><FiFileText size={value}/><span><Ruta route='/admin/Dashboard/reports' name='Reports' /></span></li>
-        <li><FiList size={value}/><span><Ruta route='/admin/Dashboard/lists' name='Lists' /></span></li>
-      </ul>
+          {
+            subDashboard && (
+              <SubDashboard />
+            )
+          }
+
+          <li onClick={() => {
+            setSubDevices(!subDevices)
+          }}> <FiCodesandbox size={value}/> <span><Ruta route='/admin/devices' name='Devices' /></span>
+          </li>
+
+          {
+            subDevices && (
+              <SubDevices />
+            )
+          }
+
+          <li> <FiCamera size={value}/> <span><Ruta route='/admin/companies' name='Companies' /></span></li>
+        </ul>
     </div>
   )
 }
