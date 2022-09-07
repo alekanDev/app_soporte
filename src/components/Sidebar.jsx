@@ -9,18 +9,19 @@ const value=20
 const Sidebar = () => {
 
   const [subDashboard, setSubDashboard] = useState(false)
+
   return (
     <div className='sidebarContent'>
         <ul className='itemsMenu'>
           <li onClick={() => {
             setSubDashboard(!subDashboard)
-            }}><FiLayout size={value} /><span><Ruta route='' name='Dashboard' /></span><FiChevronDown/>
-            </li>
-            {subDashboard && (
-              <Dashboard />
-            )}
-          <li> <FiCodesandbox size={value}/> <span><Ruta route='/admin/companies' name='Companies' /></span></li>
-          <li> <FiCamera size={value}/> <span><Ruta route='/admin/devices' name='Devices' /></span></li>
+            }}><FiLayout size={value} /><span><Ruta route='/admin/Dashboard' name='Dashboard' /></span><FiChevronDown/> 
+          </li>
+          {subDashboard && (
+            <Dashboard />
+          )}
+            <li> <FiCodesandbox size={value}/> <span><Ruta route='/admin/companies' name='Companies' /></span></li>
+            <li> <FiCamera size={value}/> <span><Ruta route='/admin/devices' name='Devices' /></span></li>
         </ul>
     </div>
   )
