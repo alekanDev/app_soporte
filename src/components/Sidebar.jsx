@@ -1,20 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/sidebar.css'
 import Ruta from './Ruta'
-// import { FaCity, FaHome, FaSimplybuilt } from "react-icons/fa"
-import { FiLayout, FiCamera,FiCodesandbox } from "react-icons/fi"
+import { FiLayout, FiCamera,FiCodesandbox, FiChevronDown, FiFileText, FiList } from "react-icons/fi"
 
 
+const value=20
 
 const Sidebar = () => {
-  const value=20
+
+  const [subDashboard, setSubDashboard] = useState(false)
+
   return (
     <div className='sidebarContent'>
         <ul className='itemsMenu'>
-          <li><FiLayout size={value} /><span><Ruta route='/admin' name='Dashboard' /></span></li>
-          <li> <FiCodesandbox size={value} /> <span><Ruta route='/admin/companies' name='Companies' /></span></li>
-          <li> <FiCamera size={value} /> <span><Ruta route='/admin/devices' name='Devices' /></span></li>
+          <li onClick={() => {
+            setSubDashboard(!subDashboard)
+            }}><FiLayout size={value} /><span><Ruta route='/admin/Dashboard' name='Dashboard' /></span><FiChevronDown/> 
+          </li>
+          {subDashboard && (
+            <Dashboard />
+          )}
+            <li> <FiCodesandbox size={value}/> <span><Ruta route='/admin/companies' name='Companies' /></span></li>
+            <li> <FiCamera size={value}/> <span><Ruta route='/admin/devices' name='Devices' /></span></li>
         </ul>
+    </div>
+  )
+}
+
+const Dashboard = () =>{
+  return(
+    <div className='subMenus'>
+      <ul className='itemsSubMenus'>
+        <li><FiFileText size={value}/><span><Ruta route='/admin/Dashboard/reports' name='Reports' /></span></li>
+        <li><FiList size={value}/><span><Ruta route='/admin/Dashboard/lists' name='Lists' /></span></li>
+      </ul>
     </div>
   )
 }

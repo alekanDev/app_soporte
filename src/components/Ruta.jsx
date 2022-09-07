@@ -8,7 +8,7 @@ const Ruta = ({route, name}) => {
     const [isActive, setIsActive] = useState(false)
 
     useEffect(() => {
-        console.log(location, route)
+        // console.log(location, route)
         if(location.pathname===route){
             setIsActive(true)
         } else {
