@@ -22,23 +22,18 @@ const Sidebar = () => {
             setSubDashboard(!subDashboard)
             }}><FiLayout size={value} /><span><Ruta route='/admin/Dashboard' name='Dashboard' /></span>
           </li>
-
-          {
-            subDashboard && (
+          {subDashboard && (
               <SubDashboard />
-            )
-          }
+            )}
 
           <li onClick={() => {
             setSubDevices(!subDevices)
           }}> <FiCodesandbox size={value}/> <span><Ruta route='/admin/devices' name='Devices' /></span>
           </li>
 
-          {
-            subDevices && (
+          {subDevices && (
               <SubDevices />
-            )
-          }
+            )}
 
           <li> <FiCamera size={value}/> <span><Ruta route='/admin/companies' name='Companies' /></span></li>
         </ul>

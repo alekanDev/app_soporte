@@ -1,0 +1,46 @@
+.title{
+  width: 100%;
+  height: 80px;
+}
+.title h1{
+  width: 50%;
+  border-bottom: black 2px solid;
+  }
+
+.formContent{
+  width: 100%;
+  height: 100%;
+}
+.formContent input,select{
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+  margin: 5px;
+  padding-left: 5px;
+}
+
+.btnSubmit{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding-right: 100px;
+}
+  .btnSubmit button{
+    width: 170px;
+    height: 100%;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--cubiqColor);
+    color: white;
+  }
+
+  .btnSubmit button:hover{
+    font-weight: 600;
+    box-shadow: black 0 0 10px;
+    text-shadow: white 0 0 30px;
+  }
