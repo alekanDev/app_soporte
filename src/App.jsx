@@ -9,6 +9,7 @@ import Companies from './pages/Companies.jsx'
 import Dashboard from './pages/Dashboard';
 import Lists from './pages/Lists';
 import Reports from './pages/Reports';
+import Register from './pages/Register'
 import Index from './pages/Index'
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
           <Route path='/admin/companies' element={ <PrivateLayout Children={ <Companies/> }/> } />
           {/* <Route path='/admin' element={ <PrivateLayout Children={ <Admin/> }/> } /> */}
           
+          <Route path='/register' element={ <Public Children={ <Register /> }/> } />
+
           <Route path='/' element={ <Public Children={ <Index /> }/> } />
         </Routes>
       </BrowserRouter>

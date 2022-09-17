@@ -9,6 +9,9 @@ const Index = () => {
         <div className='btnLogin center'>
           <Ruta route='/admin/Dashboard' name='Login' />
         </div>
+        <div className="btnLogin center">
+          <Ruta route='/register' name='Register' />
+        </div>
     </div>
   )
 }

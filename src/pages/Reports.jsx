@@ -1,9 +1,11 @@
 import React from 'react'
+import FormReports from '../components/FormReports'
+import '../styles/reports.css'
 
 const Reports = () => {
   return (
-    <div>
-        Reports_page
+    <div className='reportsContent' >
+        <FormReports />
     </div>
   )
 }
