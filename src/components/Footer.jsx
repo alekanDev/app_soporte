@@ -6,7 +6,7 @@ import { RiCopyrightLine } from "react-icons/ri";
 const Footer = () => {
   return (
     <div className='footerContent'>
-        <span>Project designed and developed by alekanDev</span> <RiCopyrightLine size={10}/>
+      <RiCopyrightLine size={10}/> 2022 <span>Project designed and developed by alekanDev</span> 
     </div>
   )
 }
