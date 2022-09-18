@@ -25,7 +25,7 @@ const Register = () => {
     <div className='registerContent'> 
       <form ref={formRegister} onSubmit={submitRegister}>
         <div className="infoRegister">
-        <input type="email" placeholder='email' name='mail' />
+        <input type="email" placeholder='email' name='mailgit ' />
         <input type="text" placeholder='name' name='name'/>
         <input type="text" placeholder='username' name='username' />
         <input type="text" placeholder='password' name='password' />
