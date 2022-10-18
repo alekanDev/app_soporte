@@ -1,21 +1,36 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import '../styles/formAddDevice.css'
 
 const FormAddDevice = () => {
+
+  const formAddDevice = useRef(null)
+
+  const submitAddDevice = (e) => {
+    e.preventDefault()
+    const fdAddDevice = new FormData(formAddDevice.current)
+    
+    let newDevice = {}
+  
+    fdAddDevice.forEach((value,key) => {
+      newDevice[key] = value
+    })
+    console.log(newDevice)
+  }
+
   return (
-    <div className='formAddDevide'>
+    <div className='formAddDevice'>
       <div className="title">
         <h1>Add device</h1>
       </div>
-      <form className='formContent'>
+      <form ref={formAddDevice} onSubmit={submitAddDevice} className='formContentAddDevice'>
         <h3>Data CubiQ</h3>
         <div className="inputs">
-          <input type="text" placeholder='name' id='name'/>
+          <input name='name' type="text" placeholder='name'/>
           <select name='type' id='type'>
             <option value="cubiqOne">type</option>
             <optgroup label='CubiQ One'>
-              <option value="cubiqOne">one</option>
-              <option value="cubiqOneOcr">one_ocr</option>
+              <option value="cubiqOne" >one</option>
+              <option value="cubiqOneOcr">one</option>
             </optgroup>
             <optgroup label='CubiQ Line'>
               <option value="cubiqLine">line</option>
@@ -25,47 +40,47 @@ const FormAddDevice = () => {
               <option value="cubiqX">CubiQ X</option>
             </optgroup>
           </select>
-          <input type="text" placeholder='pid'/>
-          <input type="text" placeholder='city'/>
-          <input type="text" placeholder='vpn'/>
-          <input type="text" placeholder='anyDesk'/>
+          <input name='pid' type="text" placeholder='pid'/>
+          <input name='city' type="text" placeholder='city'/>
+          <input name='vpn' type="text" placeholder='vpn'/>
+          <input name='anyDesk' type="text" placeholder='anyDesk'/>
           <select name='board' id='board'>
-            <option value="jetsonNano">board</option>
-            <option value="jetsonNano">jetson nano 2GB</option>
-            <option value="jetsonNano">jetson nano 4GB</option>
-            <option value="jetsonNano">yahboom</option>
+            <option >board</option>
+            <option >jetson nano 2GB</option>
+            <option >jetson nano 4GB</option>
+            <option >yahboom</option>
           </select>
           <h3>Data Cameras</h3>
           <select name='camera' id='camera'>
-            <option value="jetsonNano">camera</option>
-            <option value="jetsonNano">asus xtion pro</option>
-            <option value="jetsonNano">orbeq femto</option>
-            <option value="jetsonNano">lidar cube 1</option>
+            <option >camera</option>
+            <option >asus xtion pro</option>
+            <option >orbeq femto</option>
+            <option >lidar cube 1</option>
           </select>
-          <input type="text" placeholder='serialCamera'/>
+          <input name='serialCamera' type="text" placeholder='serialCamera'/>
           <select name='ocrCamera' id='ocrCamera'>
-            <option value="jetsonNano">ocr camera</option>
-              <option value="jetsonNano">n/A</option>
+            <option >ocr camera</option>
+              <option >n/A</option>
             <optgroup label='hikRobot'>
-              <option value="jetsonNano">id 5060</option>
-              <option value="jetsonNano">id 6000</option>
+              <option >id 5060</option>
+              <option >id 6000</option>
             </optgroup>
           </select>
           <select name='externalCamera' id='externalCamera'>
-            <option value="jetsonNano">external camera</option>
-            <option value="jetsonNano">n/A</option>
-            <option value="jetsonNano">dhajua</option>
-            <option value="jetsonNano">elp</option>
+            <option >external camera</option>
+            <option >n/A</option>
+            <option >dhajua</option>
+            <option >elp</option>
           </select>
-          <input type="text" placeholder='ipExternaCamera'/>
+          <input name='ipExternalCemera' type="text" placeholder='ipExternaCamera'/>
           <h3>Data Version</h3>
-          <input type="text" placeholder='versionCubiQ'/>
-          <input type="text" placeholder='versionCubiQ_one'/>
-          <input type="text" placeholder='versionMiddleware'/>
+          <input name='versionCubiQ' type="text" placeholder='versionCubiQ'/>
+          <input name='versionCubiQ_one' type="text" placeholder='versionCubiQ_one'/>
+          <input name='versionMiddleware' type="text" placeholder='versionMiddleware'/>
           <h3>Keywords</h3>
-          <input type="text" placeholder='keywords'/>
+          <input name='keywords' type="text" placeholder='keywords'/>
         </div>
-        <div className='btnSubmit'>
+        <div className='btnSubmitAddDevice'>
           <button className='buttonSub' type='submit'>Add</button>
         </div>
       </form>

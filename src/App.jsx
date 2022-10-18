@@ -17,10 +17,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
+          <Route path='/admin/devices/reports' element={ <PrivateLayout Children={ <Reports/> }/> } />
           <Route path='/admin/devices/addDevice' element={ <PrivateLayout Children={ <FormAddDevice /> }/> } />
           <Route path='/admin/devices' element={ <PrivateLayout Children={ <Devices/> }/> } />
 
-          <Route path='/admin/Dashboard/reports' element={ <PrivateLayout Children={ <Reports/> }/> } />
           <Route path='/admin/Dashboard/lists' element={ <PrivateLayout Children={ <Lists/> }/> } />
           <Route path='/admin/Dashboard' element={ <PrivateLayout Children={ <Dashboard/> }/> } />
 

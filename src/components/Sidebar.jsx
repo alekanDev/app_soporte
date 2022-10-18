@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/sidebar.css'
 import Ruta from './Ruta'
-import { FiLayout, FiCamera,FiCodesandbox } from "react-icons/fi"
+import { FiLayout, FiTrello, FiCodesandbox } from "react-icons/fi"
 // import { FiFileText, FiList } from 'react-icons/fi'
 // import { FiPlusSquare } from 'react-icons/fi'
 
@@ -35,7 +35,7 @@ const Sidebar = () => {
               <SubDevices />
             )}
 
-          <li> <FiCamera size={value}/> <span><Ruta route='/admin/companies' name='Companies' /></span></li>
+          <li> <FiTrello size={value}/> <span><Ruta route='/admin/companies' name='Companies' /></span></li>
         </ul>
     </div>
   )

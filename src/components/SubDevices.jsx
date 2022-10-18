@@ -1,6 +1,6 @@
 import React from 'react'
 import Ruta from './Ruta'
-import { FiPlusSquare } from 'react-icons/fi'
+import { FiPlus, FiFileText } from 'react-icons/fi'
 
 
 
@@ -10,7 +10,8 @@ const SubDevices = () => {
   return(
     <div className='subMenus'>
       <ul className='itemsSubMenus'>
-        <li><FiPlusSquare size={value}/><span><Ruta route='/admin/devices/addDevice' name='add Device' /></span></li>
+        <li><FiPlus size={value}/><span><Ruta route='/admin/devices/addDevice' name='add Device' /></span></li>
+        <li><FiFileText size={value}/><span><Ruta route='/admin/devices/reports' name='Reports' /></span></li>
       </ul>
     </div>
   )
